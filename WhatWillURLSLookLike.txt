@@ -1,0 +1,13 @@
+GET /post/id ==> returns @post title,user_id,url created_at,updated_at
+    ==>url
+
+GET /post/id/comments ==> @comments where the post_id == id, content, user_ids, comment_ids, created_at, updated_at
+    ==> content, user_id, post_id
+
+GET /user/id ==> username, email, id, created_at, updated_at
+    ==> username, created_at, id
+
+POST /post/id ==> redirects to /post/id and creates a comment for that post.
+
+
+
