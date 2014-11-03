@@ -11,19 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141103193627) do
+ActiveRecord::Schema.define(version: 20141103212601) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: true do |t|
-    t.text     "content"
-    t.integer  "votes"
-    t.integer  "user_id"
-    t.integer  "thread_id"
-    t.integer  "comment_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.text    "content"
+    t.integer "user_id"
+    t.integer "thread_id"
+    t.integer "comment_id"
   end
 
   add_index "comments", ["comment_id"], name: "index_comments_on_comment_id", using: :btree
@@ -31,30 +28,25 @@ ActiveRecord::Schema.define(version: 20141103193627) do
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "threads", force: true do |t|
-    t.string   "title"
-    t.string   "url"
-    t.text     "content"
-    t.integer  "points"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string  "title"
+    t.string  "url"
+    t.text    "body"
+    t.integer "user_id"
   end
 
   add_index "threads", ["user_id"], name: "index_threads_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
-    t.string   "username"
-    t.string   "email"
-    t.text     "about"
-    t.integer  "karma"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "name"
+    t.string "email"
+    t.text   "about"
   end
 
   create_table "votes", force: true do |t|
     t.integer "user_id"
-    t.integer "comment_id"
     t.integer "thread_id"
+    t.integer "comment_id"
+    t.boolean "value"
   end
 
   add_index "votes", ["comment_id"], name: "index_votes_on_comment_id", using: :btree
