@@ -10,6 +10,13 @@ gem 'spring', :group => :development
 
 gem 'pg'
 
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'rspec-rails', '~> 3.0.0'
+end
+
+
 
 
 # To use ActiveModel has_secure_password
