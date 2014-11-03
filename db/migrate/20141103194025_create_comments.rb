@@ -4,9 +4,10 @@ class CreateComments < ActiveRecord::Migration
 
       t.string :content
 
-      t.parent :parent
+      # t.parent :parent
       t.belongs_to :post
       t.belongs_to :user
+      t.belongs_to :comment
 
       t.timestamps
     end
