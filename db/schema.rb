@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 20141103213006) do
 
   add_index "votes", ["comment_id"], name: "index_votes_on_comment_id", using: :btree
   add_index "votes", ["post_id"], name: "index_votes_on_post_id", using: :btree
+  add_index "votes", ["user_id", "comment_id"], name: "index_votes_on_user_id_and_comment_id", unique: true, using: :btree
+  add_index "votes", ["user_id", "post_id"], name: "index_votes_on_user_id_and_post_id", unique: true, using: :btree
   add_index "votes", ["user_id"], name: "index_votes_on_user_id", using: :btree
 
 end
