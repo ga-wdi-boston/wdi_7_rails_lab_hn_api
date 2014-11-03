@@ -4,6 +4,7 @@ class CreatePosts < ActiveRecord::Migration
     	t.string :title
     	t.belongs_to :user
     	t.timestamps
+    	t.string :url
     end
   end
 end
