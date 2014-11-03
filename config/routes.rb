@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+
+  resources :submissions, only: [:show, :index, :new] do
+    resources :comments, only:  [:show, :index, :new]
+    resources :votes, only: [:new]
+  end
+
+  resources :comments, only: [:index] do
+    resources :votes, only: [:new]
+  end
+
+  resources :users, only: [:show, :new] do
+    resources :submissions, only: [:index]
+    resources :comments, only: [:index]
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
