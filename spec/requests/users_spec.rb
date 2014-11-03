@@ -6,4 +6,17 @@ describe "User API" do
     json = JSON.parse(response.body)
     expect(json['users'].length).to eq(10) # check to make sure the right amount of messages are returned
   end
+
+  it 'retrieves a specific message' do
+    user = FactoryGirl.create(:user)
+    get "/users/#{user.id}"
+
+    # test for the 200 status-code
+    expect(response).to be_success
+
+    # check that the message attributes are the same.
+    expect(json['name']).to eq(user.name)
+    expect(json['email']).to eq(user.email)
+    expect(json['about']).to eq(user.about)
+  end
 end
