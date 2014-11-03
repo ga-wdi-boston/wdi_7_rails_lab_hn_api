@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141103212601) do
+ActiveRecord::Schema.define(version: 20141103213006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,22 +19,22 @@ ActiveRecord::Schema.define(version: 20141103212601) do
   create_table "comments", force: true do |t|
     t.text    "content"
     t.integer "user_id"
-    t.integer "thread_id"
+    t.integer "post_id"
     t.integer "comment_id"
   end
 
   add_index "comments", ["comment_id"], name: "index_comments_on_comment_id", using: :btree
-  add_index "comments", ["thread_id"], name: "index_comments_on_thread_id", using: :btree
+  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
-  create_table "threads", force: true do |t|
+  create_table "posts", force: true do |t|
     t.string  "title"
     t.string  "url"
     t.text    "body"
     t.integer "user_id"
   end
 
-  add_index "threads", ["user_id"], name: "index_threads_on_user_id", using: :btree
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string "name"
@@ -44,13 +44,13 @@ ActiveRecord::Schema.define(version: 20141103212601) do
 
   create_table "votes", force: true do |t|
     t.integer "user_id"
-    t.integer "thread_id"
+    t.integer "post_id"
     t.integer "comment_id"
     t.boolean "value"
   end
 
   add_index "votes", ["comment_id"], name: "index_votes_on_comment_id", using: :btree
-  add_index "votes", ["thread_id"], name: "index_votes_on_thread_id", using: :btree
+  add_index "votes", ["post_id"], name: "index_votes_on_post_id", using: :btree
   add_index "votes", ["user_id"], name: "index_votes_on_user_id", using: :btree
 
 end
