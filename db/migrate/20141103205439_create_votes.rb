@@ -7,7 +7,7 @@ class CreateVotes < ActiveRecord::Migration
       t.boolean :value
     end
 
-    add_index :unique_submission_vote_keys, [:user_id, :submission_id], unique: true
-    add_index :unique_comment_vote_keys, [:user_id, :comment_id], unique: true
+    add_index :votes, [:user_id, :submission_id], unique: true
+    add_index :votes, [:user_id, :comment_id], unique: true
   end
 end
