@@ -10,4 +10,13 @@ GET /user/id ==> username, email, id, created_at, updated_at
 POST /post/id ==> redirects to /post/id and creates a comment for that post.
 
 
+GET  /user/id/posts ==> all posts from that user
+
+GET /newcomments ==> Most recent comments
+
+GET /user/id/comments ==> all comments from that user
+GET/user/id/comment/id/edit
+GET/user/id/comment/id/delete
+GET/user/id/comment/id/link
+GET/submit ==> Renders new submission form
 
