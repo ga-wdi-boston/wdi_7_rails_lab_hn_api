@@ -10,14 +10,11 @@ gem 'spring', :group => :development
 
 gem 'pg'
 
-group :development do
+group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
-end
-
-group :test do
   gem 'rspec-rails'
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
   gem 'faker'
 end
 
