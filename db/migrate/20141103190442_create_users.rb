@@ -5,6 +5,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.text :about
       t.integer :karma
+
+      t.timestamps
     end
   end
 end

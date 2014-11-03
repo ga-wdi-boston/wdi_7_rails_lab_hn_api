@@ -6,6 +6,8 @@ class CreateThreads < ActiveRecord::Migration
       t.text :content
       t.integer :points
       t.belongs_to :user, index: true
+
+      t.timestamps
     end
   end
 end
