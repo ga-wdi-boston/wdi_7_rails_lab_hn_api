@@ -22,8 +22,8 @@ describe "User API" do
     json = JSON.parse(response.body)
 
     # check that the message attributes are the same.
-    expect(json['name']).to eq(user.name)
-    expect(json['email']).to eq(user.email)
-    expect(json['about']).to eq(user.about)
+    expect(json["name"]).to eq(user.name)
+    expect(json["email"]).to eq(user.email)
+    expect(json["about"]).to eq(user.about)
   end
 end
