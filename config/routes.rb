@@ -3,6 +3,6 @@ Rails.application.routes.draw do
     resources :posts, except: [:new, :edit]
   end
 
-  resources :comments, only: [:index]
+  resources :comments, only: [:index, :show]
   resources :votes
 end
