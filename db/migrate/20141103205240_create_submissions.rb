@@ -4,7 +4,7 @@ class CreateSubmissions < ActiveRecord::Migration
       t.string :title
       t.string :url
       t.text :body
-      t.reference :user
+      t.references :user, index: true 
     end
   end
 end
