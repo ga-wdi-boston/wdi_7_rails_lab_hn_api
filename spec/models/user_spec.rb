@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id    :integer          not null, primary key
+#  name  :string
+#  about :text
+#  email :string
+#
+
 require "rails_helper"
 
 RSpec.describe User, type: :model do
@@ -12,10 +22,9 @@ RSpec.describe User, type: :model do
     expect(user.errors[:name]).not_to include("can't be blank")
   end
 
-  it "is invalide without an email" do
+  it "is invalid without an email" do
     user = FactoryGirl.build(:user, email: nil)
     user.valid?
     expect(user.errors[:email]).not_to include("can't be blank")
   end
-
 end

@@ -5,6 +5,8 @@ class CreateVotes < ActiveRecord::Migration
       t.references :submission, index: true
       t.references :comment, index: true
       t.boolean :value
+
+      t.timestamps
     end
 
     add_index :votes, [:user_id, :submission_id], unique: true

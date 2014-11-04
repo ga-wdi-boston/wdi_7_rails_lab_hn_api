@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: submissions
+#
+#  id      :integer          not null, primary key
+#  title   :string
+#  url     :string
+#  body    :text
+#  user_id :integer
+#
+
 class Submission < ActiveRecord::Base
   belongs_to :user
   has_many :comments

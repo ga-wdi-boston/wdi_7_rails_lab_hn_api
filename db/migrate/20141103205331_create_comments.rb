@@ -5,6 +5,8 @@ class CreateComments < ActiveRecord::Migration
       t.references :user, index: true 
       t.references :submission, index: true 
       t.references :comment, index: true 
+
+      t.timestamps
     end
   end
 end

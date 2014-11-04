@@ -17,10 +17,12 @@ ActiveRecord::Schema.define(version: 20141103205436) do
   enable_extension "plpgsql"
 
   create_table "comments", force: true do |t|
-    t.text    "content"
-    t.integer "user_id"
-    t.integer "submission_id"
-    t.integer "comment_id"
+    t.text     "content"
+    t.integer  "user_id"
+    t.integer  "submission_id"
+    t.integer  "comment_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "comments", ["comment_id"], name: "index_comments_on_comment_id", using: :btree
@@ -28,25 +30,31 @@ ActiveRecord::Schema.define(version: 20141103205436) do
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "submissions", force: true do |t|
-    t.string  "title"
-    t.string  "url"
-    t.text    "body"
-    t.integer "user_id"
+    t.string   "title"
+    t.string   "url"
+    t.text     "body"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "submissions", ["user_id"], name: "index_submissions_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
-    t.string "name"
-    t.text   "about"
-    t.string "email"
+    t.string   "name"
+    t.text     "about"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "votes", force: true do |t|
-    t.integer "user_id"
-    t.integer "submission_id"
-    t.integer "comment_id"
-    t.boolean "value"
+    t.integer  "user_id"
+    t.integer  "submission_id"
+    t.integer  "comment_id"
+    t.boolean  "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "votes", ["comment_id"], name: "index_votes_on_comment_id", using: :btree
