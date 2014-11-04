@@ -5,6 +5,15 @@ RSpec.describe User, :type => :model do
     expect(FactoryGirl.build_stubbed(:user)).to be_valid
   end
 
-  it "is invalid without a name"
-  it "is invalid without an email"
+  it "is invalid without a name" do
+    user = FactoryGirl.build(:user, name: nil)
+    user.valid?
+    expect(user.errors[:name]).not_to include("can't be blank")
+  end
+
+  it "is invalid without an email" do
+    user = FactoryGirl.build(:user, email: nil)
+    user.valid?
+    expect(user.errors[:email]).not_to include("can't be blank")
+  end
 end
