@@ -39,12 +39,11 @@ ActiveRecord::Schema.define(version: 20141103205440) do
   add_index "submissions", ["user_id"], name: "index_submissions_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
-    t.string   "username",               null: false
+    t.string   "name",       null: false
     t.text     "about"
-    t.string   "email",                  null: false
-    t.integer  "karma",      default: 0
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "email",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "votes", force: true do |t|

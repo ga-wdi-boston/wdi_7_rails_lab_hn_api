@@ -7,5 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.delete_all;
 
-u1 = User.create(username: "User One", email: "test1@test.com", about: "I'm all about user one.");
-u2 = User.create(username: "User Two", email: "test2@test.com", about: "I'm all about user two.");
+u1 = User.create(name: "User One", email: "test1@test.com", about: "I'm all about user one.");
+u2 = User.create(name: "User Two", email: "test2@test.com", about: "I'm all about user two.");
