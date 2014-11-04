@@ -2,13 +2,13 @@
 
   describe "GET /comments" do
 
-    it "returns all the comments" do
+    it "returns all comments" do
       @comment1 = FactoryGirl.create :comment, content: "Here is some more test content; 1B"
       @comment2 = FactoryGirl.create :comment, content: "And here is some more;1C"
 
-      get '/comments' #, {}, {"Accept" => "application/json"}
+      get '/comments'
 
-      expect(response).to be_success #.status).to eq 200
+      expect(response).to be_success #HTTP:Code: 200 successful request
       body = JSON.parse(response.body)
       comment_contents = body.map{|c| c["content"]}
 
@@ -17,18 +17,18 @@
     end
 
 
-    it "returns consistent objects" do
+    it "returns correct comment ids" do
       @comment1 = FactoryGirl.create :comment, content: "Here is some more test content; 1B"
       @comment2 = FactoryGirl.create :comment, content: "And here is some more;1C"
 
        get '/comments'
 
-     expect(response).to be_success
+     expect(response).to be_success #HTTP:Code: 200 successful request
      body = JSON.parse(response.body)
      comment_contents = body.map{|c| c["id"]}
 
      expect(comment_contents[0]).to eq(@comment1.id)
-   end
+    end
 
     it 'retrieves a specific comment' do
       comment = FactoryGirl.create(:comment)
@@ -39,7 +39,7 @@
       expect(json['private_attr']).to eq(nil)
     end
 
-    it 'has a post_id' do
+    it 'has a parent-post_id' do
       @post = Post.create
       comment = @post.comments.create
       get"/comments/#{comment.id}"
@@ -52,35 +52,5 @@
       expect(json["post_id"]).to eq(@post.id)
     end
 
+  end
 end
-end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
