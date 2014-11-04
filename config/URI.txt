@@ -8,4 +8,6 @@ GET user/id => user name, email, id, created at, updated at
 
 POST post/id ==> redirect_to post_id
 
-GET user/id/posts
+GET user/id/posts==> all posts from user
+
+GET post/new ==> render form
