@@ -1,10 +1,31 @@
 require 'rails_helper'
 
 RSpec.describe "Post Comments", :type => :request do
-  describe "GET /posts/:id/comments" do
-    it "works! (now write some real specs)" do
-      get post_comments_path(@post.id)
-      expect(response).to have_http_status(200)
-    end
+
+  before(:all) do
+    @post = FactoryGirl.build_stubbed(:post)
+  end
+
+  let(:json) { JSON.parse(response.body) }
+
+  describe '#index' do
+    comments = FactoryGirl.create_list(:post, 10, post: @post)
+    get post_comments_path(@post.id)
+    expect(json.length).to eq(10)
+  end
+
+  describe '#show' do
+    comment = FactoryGirl.build_stubbed(:comment, post: @post)
+    get post_comment_path(comment.id)
+    expect(json['id']).to eq comment.id
+  end
+  describe '#create' do
+
+  end
+  describe '#update' do
+
+  end
+  describe '#delete' do
+
   end
 end
