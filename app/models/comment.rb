@@ -6,6 +6,5 @@ class Comment < ActiveRecord::Base
   validates :content, presence: true
   validates :user_id, presence: true
   validates :submission_id, presence: true
-  # validates_associated :votes
-  # validates_associated :comments
+  validates_associated :votes
 end

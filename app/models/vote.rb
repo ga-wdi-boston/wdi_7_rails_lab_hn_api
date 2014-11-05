@@ -11,4 +11,8 @@ class Vote < ActiveRecord::Base
   validates :comment_id, presence: true, if: "submission_id.nil?"
   validates :submission_id, presence: true, if: "comment_id.nil?"
 
+  # validates :vote_id, uniqueness: {scope: :user_id, :submission_id }
+  # validates :vote_id, uniqueness: {scope: :user_id, :comment_id }
+
+
 end

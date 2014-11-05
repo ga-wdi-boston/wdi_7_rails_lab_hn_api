@@ -49,7 +49,10 @@ RSpec.describe Vote, type: :model do
     expect(vote.errors[:comment_id]).to include("can't be blank")
   end
 
-  it "is unique based on user and submission" do
-  end
+  # context "validate uniquness on submission" do
+  #   let(:vote) { FactoryGirl.build(:submission_vote) }
+
+  #   it { expect(vote).not_to validate_uniqueness_of(:vote).scoped_to(:user_id, :submission_id)}
+  # end
 
 end
