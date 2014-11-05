@@ -11,7 +11,8 @@ class SubmissionsController < ApplicationController
   end
 
   def create
-    @submission = Submission.new(submission_params)
+    @submission = Submission.create(submission_params)
+    render json: @submission
   end
 
   # def create_vote
