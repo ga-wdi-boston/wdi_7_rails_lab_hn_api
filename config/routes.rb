@@ -9,9 +9,9 @@ Rails.application.routes.draw do
     resources :votes, only: :new
   end
 
-  resources :users, only: [:show, :new] do
+  resources :users, only: [:index, :show, :new] do
     resources :submissions, only: :index
-    resources :comments, only: :indexå
+    resources :comments, only: :index
   end
 
 end
