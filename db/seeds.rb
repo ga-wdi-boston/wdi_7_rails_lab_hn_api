@@ -30,5 +30,3 @@ submissions_list.each do |title, url, body, user|
   Submission.create(title: title, url: url, body: body, user_id: User.find_by(name: user).id)
 end
 
-
-
