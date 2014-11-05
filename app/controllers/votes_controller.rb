@@ -5,6 +5,15 @@ class VotesController < ApplicationController
     render json: @votes
   end
 
+  def show
+    @vote = Vote.find(params[:id])
+    if @vote
+      render json: @vote, status: :created, location: @vote
+    else
+      render json: @vote.errors, status: :unprocessable_entity
+    end
+  end
+
   def create
     @vote = Vote.new(allowed_params)
 

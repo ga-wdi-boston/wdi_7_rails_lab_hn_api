@@ -5,6 +5,15 @@ class UsersController < ApplicationController
     render json: @users
   end
 
+  def show
+    @user = User.find(params[:id])
+    if @user
+      render json: @user, status: :created, location: @user
+    else
+      render json: @user.errors, status: :unprocessable_entity
+    end
+  end
+
   def create
     @user = User.new(allowed_params)
 
