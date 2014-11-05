@@ -6,21 +6,21 @@ class SubmissionsController < ApplicationController
   end
 
   def show
-    newest
-  end
-
-  def newest
-    @submissions = Submission.last(20)
-    render json: @submissions
+    @submission = Submission.find(params[:id])
+    render json: @submission
   end
 
   def create
-    @submission = Submission.new(submission_params)
-    if @submission.save
-      render json: @submission, status: :created, location: @submission
-    else
-      render json: @submission.errors, status: :unprocessable_entity
-    end
+    @user = User.find(id: params(:user_id))
+    @submission = @user.submissions.create(submission_params)
+
+  end
+
+  def create_vote
+    @submission = Submission.find(:id params(:post_id))
+    @vote = @submission.votes.create(vote_params)
+  end
+
   end
 
   private
