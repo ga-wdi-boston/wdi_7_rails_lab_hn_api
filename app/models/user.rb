@@ -1,4 +1,4 @@
-class User < ActiveRecord::API
+class User < ActiveRecord::Base
   validates :name, presence: true
   validates :email, presence: true
 end

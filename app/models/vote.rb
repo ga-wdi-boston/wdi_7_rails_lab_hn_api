@@ -1,4 +1,4 @@
-class Vote < ActiveRecord::API
+class Vote < ActiveRecord::Base
   belongs_to :user
   belongs_to :post
   belongs_to :comment
