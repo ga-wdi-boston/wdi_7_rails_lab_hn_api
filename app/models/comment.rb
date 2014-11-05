@@ -4,4 +4,6 @@ class Comment < ActiveRecord::Base
   belongs_to :comment
   has_many :votes
   has_many :comments
+
+  validates :content, presence: true
 end
