@@ -17,7 +17,7 @@ Bundler.require(*Rails.groups)
 module Wdi7RailsLabHnApi
   class Application < Rails::Application
 
-    config.middleware.insert_before "ActionDispatch::Static", "Rack::Cors", :debug => true, :logger => (-> { Rails.logger }) do
+    config.middleware.insert_before ActionDispatch::Static, Rack::Cors, :debug => true, :logger => (-> { Rails.logger }) do
       allow do
         origins '*'
 
