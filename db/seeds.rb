@@ -20,3 +20,14 @@ submission_2 = Submission.create({
   user_id: 2
 })
 
+comment_1 = Comment.create({
+  content: "Nifty!",
+  user_id: 2,
+  submission_id: 1
+})
+
+comment_2 = Comment.create({
+  content: "Nifty!",
+  user_id: 1,
+  submission_id: 2
+})
