@@ -16,4 +16,7 @@ RSpec.describe User, :type => :model do
     user.valid?
     expect(user.errors[:email]).not_to include("can't be blank")
   end
+
+  it "must have a username with a minimum of two characters" do
+  end
 end
