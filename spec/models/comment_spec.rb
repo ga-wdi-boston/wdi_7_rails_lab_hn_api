@@ -5,7 +5,7 @@ RSpec.describe Comment, :type => :model do
     expect(FactoryGirl.build_stubbed(:comment)).to be_valid
   end
 
-  it "is invalid without content" do
+  it "is invalid without any content" do
     comment = FactoryGirl.build(:comment, content: nil)
     comment.valid?
     expect(comment.errors[:content]).not_to include("can't be blank")
