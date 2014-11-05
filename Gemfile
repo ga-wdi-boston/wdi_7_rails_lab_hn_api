@@ -7,8 +7,11 @@ gem 'rails-api'
 
 gem 'spring', :group => :development
 
-
 gem 'pg'
+gem 'factory_girl_rails'
+gem 'faker', '~> 1.4.3'
+
+gem 'rack-cors'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
