@@ -19,8 +19,6 @@ class SubmissionsController < ApplicationController
   #   @vote = @submission.votes.create(vote_params)
   # end
 
-end
-
   private
   def submission_params
     params.require(:submission).permit(:title, :url, :body, :user_id)
