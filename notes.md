@@ -1,0 +1,21 @@
+# Models
+
+- User
+  - name:string
+  - email:string
+  - about:text
+- Post
+  - title:string
+  - url:string
+  - body:string
+  - user:belongs_to
+- Comment
+  - content:text
+  - user:belongs_to
+  - post:belongs_to
+  - comment:belongs_to
+- Vote
+  - value:boolean (i.e. up or down vote)
+  - user:belongs_to
+  - post:belongs_to
+  - comment:belongs_to
