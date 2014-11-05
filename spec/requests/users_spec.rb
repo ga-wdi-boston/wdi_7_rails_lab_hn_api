@@ -6,17 +6,19 @@ describe "User API" do
       get '/users'
       expect(response).to be_success
       json = JSON.parse(response.body)
-      expect(json['users'].length).to eq(10)
+      expect(json.length).to eq(10)
     end
   end
 
-  it "returns the information of the given user" do
-    user = FactoryGirl.create(:user)
+  describe "#show" do
+    it "returns the information of the given user" do
+      user = FactoryGirl.create(:user)
 
-    get "/users/#{user.id}"
+      get "/users/#{user.id}"
 
-    json = JSON.parse(response.body)
-    expect(json['id']).to eq(user.id)
+      json = JSON.parse(response.body)
+      expect(json['id']).to eq(user.id)
+    end
   end
 
 
