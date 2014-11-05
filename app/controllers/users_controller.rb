@@ -9,4 +9,12 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     render json: @user
   end
+
+  def create
+    @user = User.new(user_params)
+  end
+
+  def user_params
+    params.require(:user).permit(:name, :about, :email)
+  end
 end
