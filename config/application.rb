@@ -17,10 +17,20 @@ Bundler.require(*Rails.groups)
 module Wdi7RailsLabHnApi
   class Application < Rails::Application
 
-    config.middleware.insert_before Rack::Cors, Rack::Cache  do
+    config.middleware.insert_before "ActionDispatch::Static", "Rack::Cors", :debug => true, :logger => (-> { Rails.logger }) do
       allow do
         origins '*'
-        resource '*', :headers => :any, :methods => [:get, :post, :options]
+
+        resource '/cors',
+          :headers => :any,
+          :methods => [:post],
+          :credentials => false,
+          :max_age => 0
+
+        resource '*',
+          :headers => :any,
+          :methods => [:get, :post, :delete, :put, :options, :head],
+          :max_age => 0
       end
     end
 
