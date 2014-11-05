@@ -16,7 +16,7 @@ RSpec.describe Submission, type: :model do
   end
 
   it "is invalid without either a url or a body" do
-    submission = FactoryGirl.build(:text_submission, body: nil)
+    submission = FactoryGirl.build(:base_submission)
     submission.valid?
     expect(submission.errors[:body]).to include("can't be blank")
     expect(submission.errors[:url]).to include("can't be blank")

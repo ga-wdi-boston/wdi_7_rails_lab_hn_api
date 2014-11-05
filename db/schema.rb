@@ -17,15 +17,12 @@ ActiveRecord::Schema.define(version: 20141103205440) do
   enable_extension "plpgsql"
 
   create_table "comments", force: true do |t|
-    t.text     "content"
-    t.integer  "user_id"
-    t.integer  "submission_id"
-    t.integer  "comment_id"
+    t.text     "content",       null: false
+    t.integer  "user_id",       null: false
+    t.integer  "submission_id", null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
-
-  add_index "comments", ["comment_id"], name: "index_comments_on_comment_id", using: :btree
 
   create_table "submissions", force: true do |t|
     t.string   "title",      null: false
@@ -47,10 +44,10 @@ ActiveRecord::Schema.define(version: 20141103205440) do
   end
 
   create_table "votes", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "submission_id"
-    t.integer  "comment_id",    null: false
     t.integer  "direction",     null: false
+    t.integer  "user_id",       null: false
+    t.integer  "submission_id"
+    t.integer  "comment_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
