@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def index
     @comments = Comment.all
-    render json: @comments.as_json(only: [:id, :content])
+    render json: @comments
   end
 
   def show
