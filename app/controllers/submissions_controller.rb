@@ -7,7 +7,7 @@ class SubmissionsController < ApplicationController
 
   def show
     @submission = Submission.find(params[:id])
-    render json: @submission, include: 'user'
+    render json: @submission, include: 'user, comments'
   end
 
   def create
