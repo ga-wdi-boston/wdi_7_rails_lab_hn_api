@@ -21,4 +21,5 @@ describe "User API" do
     expect(json['email']).to eq(user.email)
     expect(json['about']).to eq(user.about)
   end
+
 end

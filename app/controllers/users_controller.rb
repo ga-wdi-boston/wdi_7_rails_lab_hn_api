@@ -9,12 +9,13 @@ class UsersController < ApplicationController
     render json: @user
   end
 
+  # post: /users?name=George&email=gbanis@gmail.com&about=Message
   def create
     @user = User.create(user_params)
     render json: @user
   end
 
-  # users?user[name]=George&user[email]=gbanis@gmail.com&user[about]=Message
+
   def user_params
     params.permit(:name, :email, :about)
   end
