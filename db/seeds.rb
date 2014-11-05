@@ -17,6 +17,6 @@ submission_1 = Submission.create({
 submission_2 = Submission.create({
   title: "Google Inbox Given Small Visual Update",
   body: "Not too long ago, Google launched an invite-only beta program for its new Email client, Inbox by Gmail. This new service has already gotten to be quite popular in just a few weeks, and many of us are seeing a stream of invitation requests on our G+ and Facebook news feeds. And now that users are routinely receiving three invites every few days, the community is ever expanding.",
-  user_id: 1
+  user_id: 2
 })
 
