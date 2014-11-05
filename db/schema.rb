@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(version: 20141103194322) do
   enable_extension "plpgsql"
 
   create_table "comments", force: true do |t|
-    t.string   "context"
+    t.string   "content"
     t.integer  "user_id"
     t.integer  "post_id"
-    t.integer  "comments_id"
+    t.integer  "comment_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20141103194322) do
   end
 
   create_table "votes", force: true do |t|
-    t.integer  "count"
+    t.boolean  "value"
     t.integer  "user_id"
     t.integer  "comment_id"
     t.integer  "post_id"
