@@ -31,3 +31,10 @@ comment_2 = Comment.create({
   user_id: 1,
   submission_id: 2
 })
+
+comment_3_nested = Comment.create({
+  content: "Im not so sure about this",
+  user_id: 1,
+  submission_id: 2,
+  comment_id: 2
+})
