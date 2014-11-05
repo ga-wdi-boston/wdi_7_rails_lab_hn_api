@@ -3,4 +3,8 @@ class Submission < ActiveRecord::Base
   has_many :comments
   has_many :votes
 
+  def self.top_20
+    Post.all.limit(20)
+  end
+
 end

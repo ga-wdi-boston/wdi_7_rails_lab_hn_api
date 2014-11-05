@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
 
-  resources :submissions, only: [:show, :index, :new] do
-    resources :comments, only:  [:show, :index, :new]
-    resources :votes, only: [:new]
+  resources :submissions, only: [:show, :index] do
+    resources :comments, only:  [:show, :index, :create]
+    resources :votes, only: [:create]
   end
 
-  resources :comments, only: [:index] do
-    resources :votes, only: [:new]
+  resources :comments, only: [:index, :show] do
+    resources :comments, only: [:index, :create]
+    resources :votes, only: [:create]
   end
 
-  resources :users, only: [:show, :new] do
-    resources :submissions, only: [:index]
-    resources :comments, only: [:index]
+  resources :users, only: [:show, :create, :index] do
+    resources :submissions, only: [:index, :create]
+    resources :comments, only: [:index, :create]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
