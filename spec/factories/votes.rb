@@ -1,6 +1,6 @@
 FactoryGirl.define do
-  factory :comment do
-    content "MyText"
+  factory :vote do
+    value false
     # user nil
     # post nil
     # comment nil

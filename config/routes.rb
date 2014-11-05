@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :votes, except: [:new, :edit]
   resources :users, except: [:new, :edit]
   resources :posts, except: [:new, :edit] do
     resources :comments, except: [:new, :edit]
