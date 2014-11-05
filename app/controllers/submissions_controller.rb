@@ -11,17 +11,15 @@ class SubmissionsController < ApplicationController
   end
 
   def create
-    @user = User.find(id: params(:user_id))
-    @submission = @user.submissions.create(submission_params)
-
+    @submission = Submission.new(submission_params)
   end
 
-  def create_vote
-    @submission = Submission.find(:id params(:post_id))
-    @vote = @submission.votes.create(vote_params)
-  end
+  # def create_vote
+  #   @submission = Submission.find(:id params(:post_id))
+  #   @vote = @submission.votes.create(vote_params)
+  # end
 
-  end
+end
 
   private
   def submission_params
