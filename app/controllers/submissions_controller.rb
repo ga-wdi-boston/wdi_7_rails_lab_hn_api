@@ -9,9 +9,6 @@ class SubmissionsController < ApplicationController
     if params[:user_id]
       @user = User.find(params[:user_id])
       @submissions = @user.submissions
-    # elsif params[:comment_id]
-    #   @comments = Comment.find(params[:comment_id])
-    #   @submissions = @comment.submissions
     else
       @submissions = Submission.all
     end
