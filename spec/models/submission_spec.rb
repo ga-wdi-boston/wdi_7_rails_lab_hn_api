@@ -7,7 +7,6 @@
 #  url     :string
 #  body    :text
 #  user_id :integer
-#
 
 require "rails_helper"
 

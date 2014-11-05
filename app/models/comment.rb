@@ -7,7 +7,6 @@
 #  user_id       :integer
 #  submission_id :integer
 #  comment_id    :integer
-#
 
 class Comment < ActiveRecord::Base
   belongs_to :user
