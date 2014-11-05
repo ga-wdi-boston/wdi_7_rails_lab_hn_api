@@ -19,4 +19,10 @@ url       :string
 body      :text
 user_id   :integer
 
+VOTES
+id            :integer    # primary key
+value         :boolean    # OR empty string? or nil? or undefined?
+user_id       :integer
+submission_id :integer
+comment_id    :integer
 
