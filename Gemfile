@@ -15,6 +15,8 @@ gem 'jbuilder'
 
 gem 'pry-byebug'
 
+gem 'rack-cors', require: 'rack/cors'
+
 group :production do
 	gem 'rails_12factor'
 end
