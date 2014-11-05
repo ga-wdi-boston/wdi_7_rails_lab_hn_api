@@ -22,7 +22,7 @@ end
 
 submissions_list = [
   ["Pellentesque habitant morbi tristique senectus et netus et malesuada.", "http://www.google.com/", "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.", "Some User Name"],
-  ["Submission title 2 is a sentence sometimes.", "http://www.nytimes.com/", "Body text maybe or maybe not.", "Some User Name"]
+  ["Submission title 2 is a sentence sometimes.", "http://www.nytimes.com/", "Body text maybe or maybe not.", "Some User Name"],
   ["Submission title 3 is a sentence always.", "http://www.bostonglobe.com/", "Body text maybe or maybe not and sometimes never.", "Another User Name"]
 ]
 
