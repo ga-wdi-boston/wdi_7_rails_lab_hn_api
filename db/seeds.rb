@@ -15,19 +15,26 @@ jason.submissions.create(title: "Using linked SmartObjects in combination with L
 jason.submissions.create(title: "StubHub President Chris Tsakalakis Leaves Months After Company Reorg", url: "http://techcrunch.com/2014/11/04/stubhub-pres-out/", body:"")
 jason.submissions.create(title: "Grand Theft Auto V Gets A Huge Update For Xbox One, PS4, And PC", url: "http://techcrunch.com/2014/11/04/grand-theft-auto-v-gets-a-huge-update-for-xbox-one-ps4-and-pc/", body:"")
 jason.submissions.create(title: "Criteo Beats Estimates With €194M In Revenue", url: "http://techcrunch.com/2014/11/04/criteo-q3-earnings/", body:"")
-
+jason.submissions.create(title: "Last Night's Other Big Winner: Minimum Wage Increases", url: "http://www.motherjones.com/mojo/2014/11/minimum-wage-election-2014", body:"")
+jason.submissions.create(title: "Anthony Bourdain Brings ‘Parts Unknown’ to Massachusetts on Sunday Night", url: "http://bdcwire.com/anthony-bourdain-brings-parts-unknown-to-massachusetts-on-sunday-night/?p1=Topofpage:Carousel_sub_headline&hootPostID=2232f5ab189ded636057ceafdd8e6aac", body:"")
+jason.submissions.create(title: "Milan’s vertical forest is now a reality", url: "http://holykaw.alltop.com/milans-vertical-forest-is-now-a-reality?gk4", body:"")
+jason.submissions.create(title: "Simple Acts That Build Your Leadership Presence", url: "http://www.fastcompany.com/3037973/simple-acts-that-build-your-leadership-presence", body:"")
+jason.submissions.create(title: "3 Charged With Feeding Homeless In Fort Lauderdale", url: "http://hosted.ap.org/dynamic/stories/U/US_FEEDING_THE_HOMELESS_ARRESTS?SITE=AP&SECTION=HOME&TEMPLATE=DEFAULT", body:"")
+jason.submissions.create(title: "5 Tips to Prepare for Demo Day in Startup Tech Companies", url: "http://www.buildbrandblast.com/5-tips-to-prepare-for-demo-day-in-startup-tech-companies/", body:"")
+jason.submissions.create(title: "The We Factor", url: "http://www.virgin.com/richard-branson/the-we-factor", body:"")
+jason.submissions.create(title: "Apple Watch Set For Spring Debut, 'iPad Pro' Later In 2015", url: "http://www.forbes.com/sites/markrogowsky/2014/11/03/apple-watch-set-for-spring-debut-ipad-pro-later-in-2015/?utm_campaign=ForbesTech&utm_source=TWITTER&utm_medium=social&utm_channel=Technology&linkId=10315979", body:"")
+jason.submissions.create(title: "How Wearables Are Being Used For Social Good", url: "http://www.fastcoexist.com/3037239/how-wearables-are-being-used-for-social-good?utm_campaign=Wearables%20for%20Social%20Good%20Denise&utm_content=9470711&utm_medium=social&utm_source=twitter", body:"")
+jason.submissions.create(title: "The Filibuster Isn't Going Away, It's Just Changing Parties", url: "http://www.motherjones.com/kevin-drum/2014/11/filibuster-isnt-going-away-its-just-changing-parties", body:"")
+jason.submissions.create(title: "WWII grenade removed from basement of NY home", url: "http://bigstory.ap.org/article/aef9667b55af44c6bfd8ee3a1d20912e/wwii-grenade-removed-basement-ny-home", body:"")
+jason.submissions.create(title: "5 Reasons Why One Page Websites are Great", url: "http://theneodesign.com/5-reasons-why-one-page-websites-are-great/", body:"")
 george.submissions.create(title: "New Technology And Big Data Help You Breathe Fresh Air", url: "http://techcrunch.com/2014/11/04/new-technology-lets-you-breathe-fresh-air/", body:"")
 george.submissions.create(title: "A Guide To Conducting A Mobile UX Diagnostic", url: "http://www.smashingmagazine.com/2014/11/04/a-guide-to-conducting-a-mobile-ux-diagnostic/", body:"")
-
 shayna.submissions.create(title: "Styling And Animating SVGs With CSS", url: "http://www.smashingmagazine.com/2014/11/03/styling-and-animating-svgs-with-css/", body:"")
 shayna.submissions.create(title: "Maximize Your Creative Energy", url: "http://www.smashingmagazine.com/2014/10/30/maximize-your-creative-energy/", body:"")
-
 avi.submissions.create(title: "Government Requests for Facebook User Data This Year Rose By 24%", url: "http://newsroom.fb.com/news/2014/11/global-government-requests-report-3/", body:"")
 avi.submissions.create(title: "Airbag Protection In Something You Want To Wear Is Finally Here", url: "http://lanesplitter.jalopnik.com/airbag-protection-in-something-you-want-to-wear-is-fina-1654757035/+kcampbelldollaghan", body:"")
-
 carlos.submissions.create(title: "Alex from Target a marketing stunt? First tweeter denies it", url: "http://mashable.com/2014/11/04/marketing-claims-alex-from-target/", body:"")
 carlos.submissions.create(title: "Aruba cheats on Wi-Fi by having a tryst with Bluetooth beacons", url: "https://gigaom.com/2014/11/04/aruba-cheats-on-wi-fi-by-having-a-tryst-with-bluetooth-beacons/", body:"")
-
 holly.submissions.create(title: "The numbers behind Jill Abramson and Steven Brill’s new media venture don’t add up", url: "https://gigaom.com/2014/11/04/the-numbers-behind-jill-abramson-and-steven-brills-new-media-venture-dont-add-up/", body:"")
 holly.submissions.create(title: "Inabox buys Anittel for AU$9.88 million", url: "http://www.zdnet.com/au/inabox-buys-anittel-for-au9-88-million-7000035427/", body:"")
 
