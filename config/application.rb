@@ -17,7 +17,7 @@ Bundler.require(*Rails.groups)
 module Wdi7RailsLabHnApi
   class Application < Rails::Application
 
-    config.middleware.insert_before Rack::Cors, Rack::Cache, ActionDispatch::Static,  do
+    config.middleware.insert_before Rack::Cors, Rack::Cache  do
       allow do
         origins '*'
         resource '*', :headers => :any, :methods => [:get, :post, :options]
