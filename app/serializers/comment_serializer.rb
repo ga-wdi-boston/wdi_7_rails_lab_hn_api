@@ -8,5 +8,6 @@ class CommentSerializer < ActiveModel::Serializer
   has_many :votes
   has_many :comments
 
+  # Question about this - related to belongs_to relationships?
   url [:user, :comment, :submission]
 end
