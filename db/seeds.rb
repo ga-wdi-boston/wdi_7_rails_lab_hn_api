@@ -27,7 +27,7 @@ comment_1 = Comment.create({
 })
 
 comment_2 = Comment.create({
-  content: "Nifty!",
+  content: "Im not so sure about this",
   user_id: 1,
   submission_id: 2
 })
