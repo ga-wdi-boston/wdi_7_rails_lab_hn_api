@@ -10,6 +10,8 @@ gem 'spring', group: :development
 
 gem 'pg'
 
+gem 'rack-cors', :require => 'rack/cors'
+
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
