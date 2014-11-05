@@ -16,6 +16,6 @@ class UsersController < ApplicationController
 
   # users?user[name]=George&user[email]=gbanis@gmail.com&user[about]=Message
   def user_params
-    params.require(:user).permit(:name, :email, :about)
+    params.permit(:name, :email, :about)
   end
 end
