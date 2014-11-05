@@ -4,4 +4,4 @@ class CommentSerializer < ActiveModel::Serializer
   has_many :votes
 
   url :comment
-ends
+end
