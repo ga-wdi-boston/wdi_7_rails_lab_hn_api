@@ -9,4 +9,3 @@ class PostsController < ApplicationController
     render json: @post
   end
 end
-end
