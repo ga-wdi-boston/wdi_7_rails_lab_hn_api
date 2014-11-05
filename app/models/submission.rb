@@ -4,6 +4,6 @@ class Submission < ActiveRecord::Base
   has_many :votes
 
   def self.top_20
-    Post.all.limit(20) # Not a good way of doing it
+    Submission.all.limit(20) # Not a good way of doing it
   end
 end
