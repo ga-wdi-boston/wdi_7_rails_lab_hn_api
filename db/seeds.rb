@@ -19,5 +19,5 @@ s2 = Submission.create(title: "Article Two: Url-based", url: "http://www.wcvb.co
 c1 = Comment.create(content: "Comment One", user_id: u1.id, submission_id: s1.id);
 c2 = Comment.create(content: "Comment Two", user_id: u2.id, submission_id: s2.id);
 
-v1 = Vote.create(direction: 1, user_id: u1, submission_id: s2);
-v2 = Vote.create(direction: 1, user_id: u2, comment_id: c1);
+v1 = Vote.create(direction: 1, user_id: u1.id, submission_id: s2.id);
+v2 = Vote.create(direction: 1, user_id: u2.id, comment_id: c1.id);
