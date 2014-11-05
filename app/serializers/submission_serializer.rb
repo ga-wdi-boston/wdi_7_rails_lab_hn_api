@@ -1,5 +1,5 @@
 class SubmissionSerializer < ActiveModel::Serializer
-  attributes :title, :url, :body, :created_at, :id
+  attributes :title, :url, :body, :id
 
   belongs_to :user
 
