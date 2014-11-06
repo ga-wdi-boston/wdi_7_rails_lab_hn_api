@@ -2,20 +2,21 @@
 
 var Router = Backbone.Router.extend({
     routes: {
-        '': 'home',
-        // Syntax here is:
-        // 'URLpath': 'functionName'
-        'home': 'home',
-        'about': 'about'
+      '': 'home',
+      // Syntax here is:
+      // 'URLpath': 'functionName'
+      'home': 'home',
+      'about': 'about',
+      'submissions': 'submissions'
     },
 
     home: function() {
-        $.ajax({
-            url: 'http://localhost:3000/users',
-            type: 'GET'
-        }).done(function(response) {
-            console.table(response);
-        });
+      $.ajax({
+        url: 'http://localhost:3000/users',
+        type: 'GET'
+      }).done(function(response) {
+        console.table(response);
+      });
     },
 
     about: function() {
@@ -23,6 +24,15 @@ var Router = Backbone.Router.extend({
       $('#content').html(template({
         name: 'Ava'
       }));
+    },
+
+    submissions: function() {
+      $.ajax({
+        url: 'http://localhost:3000/submissions',
+        type: 'GET'
+      }).done(function(response){
+        console.table(response);
+      });
     }
 });
 
