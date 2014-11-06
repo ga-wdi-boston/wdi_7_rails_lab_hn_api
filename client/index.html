@@ -29,6 +29,15 @@
 
     <div class="container" id="content"></div>
 
+    <!-- This is a handlebars thing. -->
+    <!-- Normally, templates would be in their own separate file. -->
+    <script id="aboutTemplate" type="text/x-handlebars-template">
+      <h1>About Page</h1>
+
+      <p>Hello {{ name }}</p>
+    </script>
+
+
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
