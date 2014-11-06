@@ -16,7 +16,7 @@ class PostsController < ApplicationController
   def create
   	@post = Post.create(post_params)
 
-  	(@post.save) ? redirect_to :back : render :new
+  	# (@post.save) ? redirect_to :back : render :new
   end
 
   private
