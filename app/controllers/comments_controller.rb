@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
   def create
   	@comment = Comment.create(comment_params)
 
-  	(@comment.save) ? redirect_to :back : render :new
+  	# (@comment.save) ? redirect_to :back : render :new
   end
 
   private

@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   def create
   	@user = User.create(user_params)
 
-  	(@user.save) ? redirect_to :back : render :new
+  	# (@user.save) ? redirect_to :back : render :new
   end
 
   private
