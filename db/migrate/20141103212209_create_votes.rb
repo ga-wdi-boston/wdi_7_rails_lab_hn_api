@@ -2,9 +2,10 @@ class CreateVotes < ActiveRecord::Migration
   def change
     create_table :votes do |t|
       t.belongs_to :user, index: true
-      t.belongs_to :submisssion, index: true
+      t.belongs_to :submission, index: true
       t.belongs_to :comment, index: true
       t.boolean :value
+      t.timestamps
     end
 
     add_index :votes, [:user_id, :submission_id], unique: true
