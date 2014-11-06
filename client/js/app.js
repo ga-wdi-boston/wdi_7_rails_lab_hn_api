@@ -5,7 +5,7 @@ var Router = Backbone.Router.extend({
         '': 'home',
         // Syntax here is:
         // 'URLpath': 'functionName'
-        'home': 'home'
+        'home': 'home',
         'about': 'about'
     },
 
