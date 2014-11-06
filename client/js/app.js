@@ -6,6 +6,7 @@ var Router = Backbone.Router.extend({
         // Syntax here is:
         // 'URLpath': 'functionName'
         'home': 'home'
+        'about': 'about'
     },
 
     home: function() {
@@ -15,6 +16,13 @@ var Router = Backbone.Router.extend({
         }).done(function(response) {
             console.table(response);
         });
+    },
+
+    about: function() {
+      var template = Handlebars.compile($('#aboutTemplate').html());
+      $('#content').html(template({
+        name: 'Ava'
+      }));
     }
 });
 
