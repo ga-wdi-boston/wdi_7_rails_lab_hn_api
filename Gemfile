@@ -12,7 +12,8 @@ gem 'pg'
 gem 'factory_girl_rails'
 gem 'faker', '~> 1.4.3'
 
-gem 'rack-cors'
+gem 'rack-cors', :require => 'rack/cors'
+
 
 gem 'rails_12factor', group: :production
 
