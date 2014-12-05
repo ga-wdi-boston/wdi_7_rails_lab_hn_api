@@ -1,4 +1,4 @@
-[![Travis build status](https://travis-ci.org/bahmutov/xplain.png?branch=master)](https://travis-ci.org/bahmutov/xplain) [![Code Climate](https://codeclimate.com/github/fishermanswharff/wdi_7_rails_lab_hn_api/badges/gpa.svg)](https://codeclimate.com/github/fishermanswharff/wdi_7_rails_lab_hn_api)
+[![Travis build status](https://travis-ci.org/fishermanswharff/wdi_7_rails_lab_hn_api.svg?branch=master)](https://travis-ci.org/fishermanswharff/wdi_7_rails_lab_hn_api) [![Code Climate](https://codeclimate.com/github/fishermanswharff/wdi_7_rails_lab_hn_api/badges/gpa.svg)](https://codeclimate.com/github/fishermanswharff/wdi_7_rails_lab_hn_api)
 
 
 # Hacker News API
