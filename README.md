@@ -1,3 +1,6 @@
+[![Travis build status](https://travis-ci.org/fishermanswharff/wdi_7_rails_lab_hn_api.svg?branch=master)](https://travis-ci.org/fishermanswharff/wdi_7_rails_lab_hn_api) [![Code Climate](https://codeclimate.com/github/fishermanswharff/wdi_7_rails_lab_hn_api/badges/gpa.svg)](https://codeclimate.com/github/fishermanswharff/wdi_7_rails_lab_hn_api)
+
+
 # Hacker News API
 
 Let's pretend we were going to build Hacker News using a JavaScript front-end application, with Rails as the back-end. Today we're just concerned with the back-end however.
