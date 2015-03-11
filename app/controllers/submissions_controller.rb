@@ -6,7 +6,8 @@ class SubmissionsController < ApplicationController
   end
 
   def show
-    newest
+    @submission = Submission.find(params[:id])
+    render json: @submission, status: :ok
   end
 
   def newest
@@ -23,7 +24,7 @@ class SubmissionsController < ApplicationController
     end
   end
 
-  private 
+  private
   def submission_params
     params.require(:submission).permit(:title, :url, :body, :user_id)
   end
