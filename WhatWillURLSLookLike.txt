@@ -1,0 +1,22 @@
+GET /post/id ==> returns @post title,user_id,url created_at,updated_at
+    ==>url
+
+GET /post/id/comments ==> @comments where the post_id == id, content, user_ids, comment_ids, created_at, updated_at
+    ==> content, user_id, post_id
+
+GET /user/id ==> username, email, id, created_at, updated_at
+    ==> username, created_at, id
+
+POST /post/id ==> redirects to /post/id and creates a comment for that post.
+
+
+GET  /user/id/posts ==> all posts from that user
+
+GET /newcomments ==> Most recent comments
+
+GET /user/id/comments ==> all comments from that user
+GET/user/id/comment/id/edit
+GET/user/id/comment/id/delete
+GET/user/id/comment/id/link
+GET/submit ==> Renders new submission form
+
