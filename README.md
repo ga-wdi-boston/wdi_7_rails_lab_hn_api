@@ -57,3 +57,18 @@ Congrats! You've now built a fully tested and documented API. If you're looking 
 - Use [Travis CI](https://travis-ci.org/) to test your builds as you check in code
 - Implement [Code Climate](https://codeclimate.com/) for automated code review
 - Evaluate your documentation with [Inch CI](http://inch-ci.org/)
+
+
+
+URLs
+
+index:    list of current top 20; website name
+articles: view article (includes comments)
+          create new article
+          edit article you authored
+          delete article (non page, and admin or author only)
+comments: view children of comment
+users:    view all submitted articles
+          view all submitted comments
+          view all votes
+
