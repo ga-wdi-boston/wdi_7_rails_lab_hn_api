@@ -23,6 +23,8 @@ Create some seed data for these models, but don't go overboard.
 
 What do you want your API to look like? What results are you expecting to see when you make various types of requests to URLs? Write down these expectations.
 
+--- Done
+
 Create the routes, controllers and serializers needed to fulfill these expectations.
 
 ### Instructions: Part 2, testing
