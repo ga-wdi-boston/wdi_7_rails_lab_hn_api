@@ -1,0 +1,13 @@
+GET post/id => return post title, user id, created_at, updated_at
+	=> URL
+GET post/id/comment = return comments where post id = id, created_at, updated_at
+	=> comment, post id, user id
+
+GET user/id => user name, email, id, created at, updated at
+	=> username, created at, id, 
+
+POST post/id ==> redirect_to post_id
+
+GET user/id/posts==> all posts from user
+
+GET post/new ==> render form
